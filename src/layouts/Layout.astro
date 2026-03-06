@@ -1,23 +1,33 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+import '../styles/global.css';
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Mini Portfolio | Noah Rognon',
+  description = 'Mini-site portfolio immersif de Noah Rognon, developpeur web full stack en BUT MMI.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#070709" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-obsidian text-white antialiased">
+    <div class="pointer-events-none fixed inset-0 -z-20 bg-[radial-gradient(circle_at_top,rgba(150,28,42,0.22),transparent_26%),radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.08),transparent_18%),linear-gradient(180deg,#09090b_0%,#070709_48%,#050507_100%)]"></div>
+    <div class="noise pointer-events-none fixed inset-0 -z-10 opacity-30"></div>
+    <div class="grid-overlay pointer-events-none fixed inset-0 -z-10 opacity-60"></div>
+    <slot />
+  </body>
+</html>

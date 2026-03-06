@@ -1,0 +1,65 @@
+---
+import type { Project } from '../data/site';
+
+interface Props {
+  project: Project;
+  reverse?: boolean;
+}
+
+const { project, reverse = false } = Astro.props;
+---
+
+<article class="reveal grid items-center gap-8 xl:gap-14" data-reveal-group>
+  <div class:list={['grid gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:items-center', reverse && 'lg:[&>div:first-child]:order-2 lg:[&>div:last-child]:order-1']}>
+    <div class="js-tilt-card glass-panel group relative overflow-hidden rounded-[34px] p-4 md:p-5">
+      <div class:list={['absolute inset-0 bg-gradient-to-br opacity-90', project.accent]}></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.16),transparent_24%),linear-gradient(180deg,rgba(255,255,255,0.06),transparent_55%)]"></div>
+
+      <div class="relative overflow-hidden rounded-[28px] border border-white/10 bg-[#09090b]">
+        <div class="flex items-center justify-between border-b border-white/10 px-4 py-3">
+          <div class="flex gap-2">
+            <span class="h-2.5 w-2.5 rounded-full bg-[#ff6b6b]"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-[#ffd166]"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-[#4ecdc4]"></span>
+          </div>
+          <span class="text-[0.68rem] uppercase tracking-[0.26em] text-white/42">{project.slug}</span>
+        </div>
+
+        <div class="relative">
+          <img
+            src={project.image}
+            alt={`Mockup du projet ${project.title}`}
+            class="js-parallax aspect-[16/10] w-full object-cover transition duration-700 group-hover:scale-[1.03]"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-6">
+      <span class="section-label">Projet selectionne</span>
+      <div class="space-y-4">
+        <h3 class="text-balance text-3xl font-semibold tracking-[-0.05em] text-white md:text-4xl lg:text-5xl">
+          {project.title}
+        </h3>
+        <p class="text-sm leading-7 text-white/66 md:text-base">{project.context}</p>
+        <p class="text-sm leading-7 text-white/82 md:text-base">{project.realization}</p>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        {project.technologies.map((tech) => (
+          <span class="rounded-full border border-white/10 bg-white/[0.055] px-4 py-2 text-xs font-medium uppercase tracking-[0.18em] text-white/70">
+            {tech}
+          </span>
+        ))}
+      </div>
+
+      <a
+        href={project.linkHref}
+        class="inline-flex items-center rounded-full border border-white/12 bg-white/5 px-5 py-3 text-sm font-medium text-white/82 transition hover:border-[#d15d6f]/40 hover:bg-[#8f2333]/14 hover:text-white"
+      >
+        {project.linkLabel}
+      </a>
+    </div>
+  </div>
+</article>

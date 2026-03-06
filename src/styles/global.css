@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Sora:wght@300;400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-obsidian: #070709;
+  --color-panel: #0f1014;
+  --color-panel-strong: #15161c;
+  --color-line: rgba(255, 255, 255, 0.1);
+  --color-bordeaux: #8f2333;
+  --color-bordeaux-soft: #c04d61;
+  --color-ivory: #f5efe9;
+  --font-sans: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", serif;
+  --shadow-glow: 0 0 0 1px rgba(255,255,255,0.08), 0 24px 80px rgba(6,7,10,0.55);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  color: var(--color-ivory);
+  background: var(--color-obsidian);
+}
+
+::selection {
+  background: rgba(192, 77, 97, 0.4);
+  color: white;
+}
+
+.noise {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E");
+}
+
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(circle at center, black 38%, transparent 85%);
+}
+
+@layer components {
+  .shell {
+    @apply mx-auto w-[min(1180px,calc(100%-2rem))] md:w-[min(1180px,calc(100%-3rem))];
+  }
+
+  .section-space {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  .section-label {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[0.68rem] font-medium uppercase tracking-[0.26em] text-white/72 backdrop-blur-xl;
+  }
+
+  .glass-panel {
+    @apply rounded-[28px] border border-white/10 bg-white/[0.045] backdrop-blur-2xl;
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glow-ring {
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      0 0 0 1px rgba(255, 255, 255, 0.06),
+      0 20px 60px rgba(5, 6, 8, 0.45),
+      0 0 80px rgba(143, 35, 51, 0.12);
+  }
+
+  .hero-title {
+    @apply text-[clamp(3.2rem,9vw,8rem)] font-semibold leading-[0.9] tracking-[-0.06em] text-white;
+  }
+
+  .hero-kicker {
+    @apply font-serif text-[clamp(1.4rem,3vw,2.7rem)] italic tracking-[-0.03em] text-white/78;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

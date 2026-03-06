@@ -1,0 +1,60 @@
+---
+import { skills } from '../data/site';
+import SectionHeading from './ui/SectionHeading.astro';
+---
+
+<section id="competences" class="section-space">
+  <div class="shell space-y-12">
+    <SectionHeading
+      eyebrow="Competences"
+      title="Une stack moderne mise en scene comme un systeme."
+      intro="Cette section ne liste pas juste des outils. Elle traduit une facon de construire des experiences web propres, actuelles et deployables."
+    />
+
+    <div class="grid gap-5 lg:grid-cols-[0.95fr_1.05fr]">
+      <div class="glass-panel reveal relative overflow-hidden rounded-[30px] p-6 md:p-8">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(143,35,51,0.28),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.04),transparent_58%)]"></div>
+        <div class="relative space-y-8">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-xs uppercase tracking-[0.3em] text-white/42">Systeme de competences</p>
+              <p class="mt-3 text-3xl font-semibold tracking-[-0.05em] text-white md:text-4xl">Front, full stack, data et interactivite.</p>
+            </div>
+            <div class="hidden h-24 w-24 rounded-full border border-white/10 bg-white/5 md:block"></div>
+          </div>
+
+          <div class="grid gap-3 sm:grid-cols-2">
+            <div class="rounded-[24px] border border-white/10 bg-black/20 p-4">
+              <p class="text-[0.7rem] uppercase tracking-[0.24em] text-white/42">Build</p>
+              <p class="mt-3 text-sm leading-7 text-white/70">Astro et TypeScript pour livrer des experiences rapides, robustes et structurees.</p>
+            </div>
+            <div class="rounded-[24px] border border-white/10 bg-black/20 p-4">
+              <p class="text-[0.7rem] uppercase tracking-[0.24em] text-white/42">Experience</p>
+              <p class="mt-3 text-sm leading-7 text-white/70">UI dynamique, motion design leger et attention au detail pour garder un rendu premium.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+        {skills.map((skill, index) => (
+          <article
+            class="glass-panel js-skill-card reveal group relative overflow-hidden rounded-[26px] p-5"
+            style={`transition-delay:${index * 50}ms`}
+          >
+            <div class="absolute inset-0 bg-gradient-to-br from-white/[0.08] via-transparent to-[#8f2333]/10 opacity-0 transition duration-500 group-hover:opacity-100"></div>
+            <div class="relative flex min-h-36 flex-col justify-between">
+              <span class="text-[0.68rem] uppercase tracking-[0.26em] text-white/36">Skill {String(index + 1).padStart(2, '0')}</span>
+              <div class="space-y-3">
+                <h3 class="text-xl font-semibold tracking-[-0.04em] text-white">{skill}</h3>
+                <div class="h-1.5 overflow-hidden rounded-full bg-white/8">
+                  <div class="js-skill-bar h-full origin-left rounded-full bg-[linear-gradient(90deg,#f2d6da_0%,#d15d6f_30%,#8f2333_100%)]" style={`width:${72 + (index % 4) * 7}%`}></div>
+                </div>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

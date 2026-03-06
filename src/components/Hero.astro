@@ -1,0 +1,108 @@
+---
+const stackItems = ['Astro', 'TypeScript', 'TailwindCSS', 'API', 'Supabase', 'IA'];
+---
+
+<section id="top" class="shell relative min-h-screen pt-6">
+  <div class="glass-panel glow-ring reveal flex items-center justify-between rounded-full px-4 py-3 text-[0.68rem] uppercase tracking-[0.24em] text-white/68 md:px-6">
+    <span>Noah Rognon</span>
+    <nav class="hidden gap-6 md:flex">
+      <a href="#competences" class="transition hover:text-white">Competences</a>
+      <a href="#projets" class="transition hover:text-white">Projets</a>
+      <a href="#valeur" class="transition hover:text-white">Valeur ajoutee</a>
+      <a href="#contact" class="transition hover:text-white">Contact</a>
+    </nav>
+  </div>
+
+  <div class="relative flex min-h-[calc(100vh-6rem)] items-center py-16 md:py-24">
+    <div class="absolute left-[-6%] top-20 h-64 w-64 rounded-full bg-[#9f1f34]/30 blur-3xl md:h-80 md:w-80"></div>
+    <div class="absolute right-[4%] top-[18%] h-40 w-40 rounded-full border border-white/10 bg-white/6 blur-3xl"></div>
+
+    <div class="grid w-full items-end gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+      <div class="relative space-y-8">
+        <span class="section-label reveal">Mini Portfolio</span>
+        <div class="space-y-5">
+          <p class="hero-kicker reveal">Noah Rognon</p>
+          <h1 class="hero-title reveal text-balance">BUT MMI <br />Developpeur Web Full Stack</h1>
+          <p class="reveal max-w-2xl text-base leading-8 text-white/68 md:text-lg">
+            Ce mini portfolio presente trois projets developpes durant mes etudes en BUT Metiers du Multimedia et de l Internet.
+            Ces projets demontrent mes competences en developpement web moderne, incluant JavaScript, TypeScript, les frameworks
+            actuels et differents environnements back-end.
+          </p>
+        </div>
+
+        <div class="reveal flex flex-col gap-4 sm:flex-row sm:items-center">
+          <a
+            href="#projets"
+            class="inline-flex items-center justify-center rounded-full bg-[linear-gradient(135deg,#f8d7db_0%,#d15d6f_18%,#891d31_60%,#5c101d_100%)] px-6 py-3 text-sm font-semibold text-white shadow-[0_20px_50px_rgba(120,12,29,0.35)] transition duration-300 hover:scale-[1.02]"
+          >
+            Explorer les projets
+          </a>
+          <a
+            href="#contact"
+            class="inline-flex items-center justify-center rounded-full border border-white/12 bg-white/5 px-6 py-3 text-sm font-medium text-white/80 transition hover:border-white/20 hover:bg-white/8 hover:text-white"
+          >
+            Voir mon univers complet
+          </a>
+        </div>
+
+        <div class="reveal flex flex-wrap gap-3 pt-2">
+          {stackItems.map((item) => (
+            <span class="js-tech-pill rounded-full border border-white/10 bg-white/[0.055] px-4 py-2 text-xs font-medium tracking-[0.14em] text-white/72 uppercase backdrop-blur-xl">
+              {item}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <div class="relative reveal lg:justify-self-end">
+        <div class="glass-panel js-tilt-card relative overflow-hidden rounded-[34px] p-5 md:p-7">
+          <div class="absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.14),transparent_28%),radial-gradient(circle_at_72%_22%,rgba(143,35,51,0.35),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.04),transparent_60%)]"></div>
+
+          <div class="relative flex min-h-[28rem] flex-col justify-between">
+            <div class="flex items-center justify-between text-[0.68rem] uppercase tracking-[0.26em] text-white/52">
+              <span>Creative Developer</span>
+              <span>2026</span>
+            </div>
+
+            <div class="space-y-6">
+              <div class="rounded-[26px] border border-white/10 bg-black/25 p-4">
+                <div class="mb-4 flex items-center justify-between text-xs text-white/50">
+                  <span>Live system</span>
+                  <span class="inline-flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-emerald-400"></span>Online</span>
+                </div>
+                <div class="grid gap-3">
+                  <div class="rounded-2xl border border-white/8 bg-white/6 p-3">
+                    <p class="text-[0.7rem] uppercase tracking-[0.22em] text-white/42">Focus</p>
+                    <p class="mt-2 text-lg font-medium tracking-[-0.03em] text-white">Interfaces premium, logique produit, experiences interactives.</p>
+                  </div>
+                  <div class="grid gap-3 sm:grid-cols-2">
+                    <div class="rounded-2xl border border-white/8 bg-white/6 p-3">
+                      <p class="text-[0.7rem] uppercase tracking-[0.22em] text-white/42">Stack</p>
+                      <p class="mt-2 text-sm leading-6 text-white/72">Astro, TypeScript, TailwindCSS, API, DB, IA.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/8 bg-white/6 p-3">
+                      <p class="text-[0.7rem] uppercase tracking-[0.22em] text-white/42">Approche</p>
+                      <p class="mt-2 text-sm leading-6 text-white/72">Performance, detail visuel, architecture claire.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid gap-3 sm:grid-cols-[1.1fr_0.9fr]">
+                <div class="rounded-[24px] border border-white/10 bg-white/[0.055] p-4">
+                  <p class="text-[0.7rem] uppercase tracking-[0.24em] text-white/42">3 projets selectionnes</p>
+                  <p class="mt-3 text-2xl font-semibold tracking-[-0.05em] text-white">Un profil front exigeant avec une vraie profondeur full stack.</p>
+                </div>
+                <div class="rounded-[24px] border border-[#b14659]/30 bg-[linear-gradient(180deg,rgba(177,70,89,0.18),rgba(255,255,255,0.03))] p-4">
+                  <p class="text-[0.7rem] uppercase tracking-[0.24em] text-white/42">Signal recruteur</p>
+                  <p class="mt-3 text-sm leading-6 text-white/78">Presentation premium, execution technique, sens produit et interactivite credible.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

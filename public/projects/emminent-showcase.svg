@@ -1,0 +1,23 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" rx="40" fill="#09090B"/>
+  <rect x="42" y="42" width="1516" height="916" rx="28" fill="#111218"/>
+  <circle cx="1220" cy="250" r="170" fill="#A0283D" fill-opacity="0.34"/>
+  <circle cx="1340" cy="210" r="120" fill="white" fill-opacity="0.06"/>
+  <rect x="98" y="114" width="646" height="772" rx="30" fill="#171821"/>
+  <rect x="138" y="154" width="260" height="34" rx="17" fill="#F5EFE9" fill-opacity="0.9"/>
+  <rect x="138" y="216" width="426" height="20" rx="10" fill="#F5EFE9" fill-opacity="0.22"/>
+  <rect x="138" y="256" width="378" height="20" rx="10" fill="#F5EFE9" fill-opacity="0.14"/>
+  <rect x="138" y="332" width="566" height="482" rx="26" fill="#B14659"/>
+  <rect x="806" y="114" width="696" height="300" rx="30" fill="#171821"/>
+  <rect x="846" y="154" width="270" height="32" rx="16" fill="#F5EFE9" fill-opacity="0.82"/>
+  <rect x="846" y="212" width="420" height="18" rx="9" fill="#F5EFE9" fill-opacity="0.18"/>
+  <rect x="846" y="246" width="374" height="18" rx="9" fill="#F5EFE9" fill-opacity="0.12"/>
+  <rect x="806" y="446" width="696" height="440" rx="30" fill="#171821"/>
+  <rect x="850" y="492" width="246" height="46" rx="23" fill="#A0283D" fill-opacity="0.44"/>
+  <rect x="850" y="576" width="608" height="34" rx="17" fill="#F5EFE9" fill-opacity="0.72"/>
+  <rect x="850" y="634" width="556" height="20" rx="10" fill="#F5EFE9" fill-opacity="0.16"/>
+  <rect x="850" y="676" width="520" height="20" rx="10" fill="#F5EFE9" fill-opacity="0.12"/>
+  <rect x="850" y="734" width="284" height="108" rx="24" fill="#1D1E27"/>
+  <rect x="1174" y="734" width="284" height="108" rx="24" fill="#1D1E27"/>
+  <text x="104" y="930" fill="#F5EFE9" fill-opacity="0.68" font-family="Arial, sans-serif" font-size="28" letter-spacing="6">EMMINENT / AUTH / AI CHAT / REVISION TOOLS</text>
+</svg>

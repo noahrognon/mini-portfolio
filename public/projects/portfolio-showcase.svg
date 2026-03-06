@@ -1,0 +1,20 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" rx="40" fill="#09090B"/>
+  <rect x="38" y="38" width="1524" height="924" rx="28" fill="#111218"/>
+  <rect x="86" y="106" width="1428" height="80" rx="20" fill="#1A1B22"/>
+  <rect x="108" y="130" width="180" height="28" rx="14" fill="#E9D6D8" fill-opacity="0.26"/>
+  <rect x="1202" y="126" width="246" height="34" rx="17" fill="#B14659" fill-opacity="0.35"/>
+  <rect x="86" y="224" width="712" height="650" rx="28" fill="#171821"/>
+  <rect x="126" y="264" width="420" height="42" rx="21" fill="#F5EFE9" fill-opacity="0.92"/>
+  <rect x="126" y="330" width="560" height="22" rx="11" fill="#F5EFE9" fill-opacity="0.24"/>
+  <rect x="126" y="372" width="502" height="22" rx="11" fill="#F5EFE9" fill-opacity="0.16"/>
+  <rect x="126" y="436" width="254" height="240" rx="24" fill="#B14659"/>
+  <rect x="402" y="436" width="356" height="240" rx="24" fill="#1F2028"/>
+  <rect x="126" y="704" width="632" height="130" rx="24" fill="#1C1D25"/>
+  <rect x="850" y="224" width="664" height="310" rx="28" fill="#171821"/>
+  <rect x="888" y="262" width="260" height="32" rx="16" fill="#F5EFE9" fill-opacity="0.84"/>
+  <rect x="888" y="322" width="538" height="18" rx="9" fill="#F5EFE9" fill-opacity="0.18"/>
+  <rect x="888" y="358" width="492" height="18" rx="9" fill="#F5EFE9" fill-opacity="0.14"/>
+  <rect x="850" y="562" width="664" height="312" rx="28" fill="#641120"/>
+  <text x="126" y="926" fill="#F5EFE9" fill-opacity="0.68" font-family="Arial, sans-serif" font-size="28" letter-spacing="6">PORTFOLIO / ASTRO / DATABASE / AI</text>
+</svg>

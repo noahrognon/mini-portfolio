@@ -1,0 +1,47 @@
+---
+import { values } from '../data/site';
+import SectionHeading from './ui/SectionHeading.astro';
+---
+
+<section id="valeur" class="section-space">
+  <div class="shell space-y-12">
+    <SectionHeading
+      eyebrow="Ma valeur ajoutee"
+      title="Ce que ces projets prouvent sur ma facon de concevoir le web."
+      intro="Au-dela des stacks, ils montrent une capacite a penser interface, produit, logique utilisateur et execution technique avec un niveau d exigence deja professionnel."
+    />
+
+    <div class="grid gap-5 lg:grid-cols-[1.08fr_0.92fr]">
+      <div class="glass-panel reveal relative overflow-hidden rounded-[34px] p-6 md:p-8">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_10%_10%,rgba(255,255,255,0.08),transparent_20%),radial-gradient(circle_at_80%_30%,rgba(143,35,51,0.28),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.03),transparent_60%)]"></div>
+        <div class="relative grid gap-4 sm:grid-cols-2">
+          {values.map((item) => (
+            <article class="rounded-[26px] border border-white/10 bg-black/20 p-5">
+              <p class="text-[0.68rem] uppercase tracking-[0.26em] text-white/42">Proof</p>
+              <h3 class="mt-4 text-2xl font-semibold tracking-[-0.05em] text-white">{item.title}</h3>
+              <p class="mt-3 text-sm leading-7 text-white/68">{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      <aside class="glass-panel reveal flex flex-col justify-between rounded-[34px] p-6 md:p-8">
+        <div class="space-y-5">
+          <span class="section-label">What I bring</span>
+          <h3 class="text-3xl font-semibold tracking-[-0.05em] text-white md:text-4xl">Un profil capable d allier impact visuel, structure et ambition technique.</h3>
+          <p class="text-sm leading-7 text-white/68 md:text-base">
+            Developpement d interfaces modernes, conception de projets full stack, integration d API, gestion de donnees,
+            experiences personnalisees et sens du detail visuel : l ensemble vise une execution propre, credible et utile.
+          </p>
+        </div>
+
+        <div class="mt-8 rounded-[28px] border border-[#b14659]/30 bg-[linear-gradient(180deg,rgba(177,70,89,0.18),rgba(255,255,255,0.03))] p-5">
+          <p class="text-[0.68rem] uppercase tracking-[0.26em] text-white/42">Positionnement</p>
+          <p class="mt-3 text-lg font-medium tracking-[-0.03em] text-white">
+            Plus qu un etudiant : une approche de developpeur web moderne, attentive au rendu final et au niveau d exigence attendu en environnement professionnel.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+---
+import { projects } from '../data/site';
+import ProjectShowcase from './ProjectShowcase.astro';
+import SectionHeading from './ui/SectionHeading.astro';
+---
+
+<section id="projets" class="section-space relative">
+  <div class="absolute inset-x-0 top-40 -z-10 h-[32rem] bg-[radial-gradient(circle_at_center,rgba(143,35,51,0.16),transparent_60%)]"></div>
+  <div class="shell space-y-14">
+    <SectionHeading
+      eyebrow="Projets"
+      title="Trois showcases penses comme des produits, pas comme de simples rendus scolaires."
+      intro="Chaque projet valorise une facette precise de mon profil : qualite front-end, architecture applicative, logique utilisateur et integration de technologies modernes."
+      align="center"
+    />
+
+    <div class="space-y-16 md:space-y-24">
+      {projects.map((project, index) => <ProjectShowcase project={project} reverse={index % 2 === 1} />)}
+    </div>
+  </div>
+</section>
